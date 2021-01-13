@@ -5,7 +5,7 @@ Cela vous permet de récupérer directement les changements de source, ainsi que
 
 ## Installer
 
-1. Exécutez `source setup.sh` (ou`. \ Setup.ps1` dans PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
 > REMARQUE: si vous exécutez setup.sh sous Windows, vous pouvez rencontrer des problèmes en recherchant le script de configuration. À la place, exécutez `./setup.sh`, et les dossiers seront créés correctement.
 

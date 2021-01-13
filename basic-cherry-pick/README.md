@@ -32,7 +32,7 @@ Comme vous pouvez le voir, la branche `feature` et la branche `master` ont progr
 4. Utilisez `git cherry-pick <commit_hash_F>` pour sélectionner uniquement le commit F sur votre branche
 5. Utilisez `git log --decorate --oneline` pour voir la modification de l'historique et ce commit F devrait maintenant être le dernier commit sur la branche master
 6. Utilisez `cat` pour voir le contenu de `names.txt` regardez comment il a maintenant changé!
-7. Utilisez `git reset --hard HEAD ^` pour supprimer cette sélection de cerises de l'historique afin que nous puissions maintenant réessayer et choisir une plage de commits
+7. Utilisez `git reset --hard HEAD^` pour supprimer cette cherry-pick de l'historique afin que nous puissions maintenant réessayer et choisir une plage de commits
 8. Utilisez `git log --decorate --oneline --graph --onelinecoda` pour vérifier que le commit cherry pick est maintenant supprimé de la branche
 9. Nous sommes maintenant essentiellement revenus à notre point de départ, utilisez maintenant `git cherry-pick <commit_hash_F> ^ .. <commit_hash_G>` pour sélectionner la plage de commits de F à G (les deux commits). Faites très attention et n'oubliez pas le symbole `^` après le premier hash de commit (voir la section *Remarque utile* ci-dessous pour comprendre pourquoi cela est nécessaire)
 10. Utilisez `git log --decorate --oneline --graph --oneline` pour afficher l'historique

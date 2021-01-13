@@ -1,33 +1,33 @@
-# Git katas: Interactive rebase with --autosquash option
-You have worked on a new feature called Hello World.
-This features ends up being complete with both documentation and unit test, but there is a typo in the documentation.
+# Git katas: rebase interactif avec l'option --autosquash
+Vous avez travaillé sur une nouvelle fonctionnalité appelée Hello World.
+Cette fonctionnalité finit par être complète avec la documentation et le test unitaire, mais il y a une faute de frappe dans la documentation.
 
-You need to fix it and then rebase to have a beautiful history.
+Vous devez la réparer puis rebaser pour avoir une belle historique.
 
-Luckily we have a release tag `v0.0` from just before we started the feature.
+Heureusement, nous avons une tag de publication `v0.0` juste avant le démarrage de la fonctionnalité.
 
-There is a way to easily fix it with advanced options for `git commit` and `git rebase`.
+Il existe un moyen de le réparer facilement avec des options avancées pour `git commit` et` git rebase`.
 
-## Setup:
+## Installer:
 
-1. Run `. setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `. setup.sh` (ou `.\setup.ps1` dans PowerShell)
 
-## Task
+## Tâche
 
-1. Explore the repo and the history so you know when the documentation file was added.
-2. Fix `README.md` file and add it.
-3. Add your commit by using `git commit --fixup=<commit id to be fixed>`.
-4. Use `git rebase --autosquash --interactive v0.0` to view the rebase recipe automatically generated.
-5. Use `git log` to view your new beautiful history.
+1. Explorez le dépôt et l'historique pour savoir quand le fichier de documentation a été ajouté.
+2. Réparez le fichier `README.md` et ajoutez-le.
+3. Ajoutez votre commit en utilisant `git commit --fixup=<commit id to be fixed>`.
+4. Utilisez `git rebase --autosquash --interactive v0.0` pour afficher la recette de rebase générée automatiquement.
+5. Utilisez `git log` pour afficher votre nouvelle belle historique.
 
-### useful commands
+### commandes utiles
 
-- `ls -l`                           # list files
-- `tail -n +1 *`                    # show content of all files
-- `git log --oneline`               # show history
-- `git log --stat`                  # log which files changed
-- `git log --patch`                 # log with diff
-- `git show <commit id>`            # show changes of a commit
-- `git add`                         # add file
-- `git commit --fixup=<commit id>`  # commit by autogenerating the message
-- `git rebase -i <ref>`             # run the interactive rebase back to <ref> and automaticaly reorder commits
+- `ls -l` # fichiers de liste
+- `tail -n +1 *` # affiche le contenu de tous les fichiers
+- `git log --oneline` # affiche l'historique
+- `git log --stat` # log quels fichiers ont changé
+- `git log --patch` # log avec diff
+- `git show <commit id>` # affiche les changements d'un commit
+- `git add` # ajouter un fichier
+- `git commit --fixup=<commit id>` # commit en générant automatiquement le message
+- `git rebase -i <ref>` # exécuter le rebase interactif vers <ref> et réorganiser automatiquement les commits
