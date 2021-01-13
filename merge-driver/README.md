@@ -1,19 +1,19 @@
 # git-merge-driver
 
-This repository contains a merge tool, in the shape of a shell script, that can handle merging conflicting `.tst` files.
-It also contains a feature branch with conflicting changes made to a `.tst` file.
-In this exercise, we will configure the git repository to always resolve merge conflicts in `.tst` files through the `merge-tst-files.sh` script.
-We'll do this by setting up `merge-tst-files.sh` as a _merge driver_ for `.tst` files.
+Ce référentiel contient un outil de fusion, sous la forme d'un script shell, qui peut gérer la fusion de fichiers `.tst` en conflit.
+Il contient également une branche de fonctionnalités avec des modifications conflictuelles apportées à un fichier `.tst`.
+Dans cet exercice, nous allons configurer le référentiel git pour toujours résoudre les conflits de fusion dans les fichiers `.tst` via le script` merge-tst-files.sh`.
+Nous le ferons en configurant `merge-tst-files.sh` comme _merge driver_ pour les fichiers` .tst`.
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-1. Define the `merge-tst-files.sh` script as a merge driver in `.git/config`
-2. Set the merge driver to be used for `.tst` files in `.gitattributes`
-3. Add the `merge-tst-files.sh` script to PATH
-4. Merge in the `feature/1` branch
-5. Check the output to verify that the `merge-tst-files.sh` script was used to resolve the conflict.
-6. Can you commit/push your merge driver configuration? If not, how else would you distribute it?
+1. Définissez le script `merge-tst-files.sh` comme pilote de fusion dans` .git/config`
+2. Définissez le pilote de fusion à utiliser pour les fichiers `.tst` dans` .gitattributes`
+3. Ajoutez le script `merge-tst-files.sh` à PATH
+4. Fusionner dans la branche `feature/1`
+5. Vérifiez la sortie pour vérifier que le script `merge-tst-files.sh` a été utilisé pour résoudre le conflit.
+6. Pouvez-vous valider/pousser la configuration de votre pilote de fusion? Sinon, comment le distribueriez-vous autrement?

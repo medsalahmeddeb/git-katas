@@ -1,37 +1,36 @@
-# Git Kata: Tagging of the commits
-## Setup:
+# Git Kata: balisage des commits
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
 ## Motivation
 
-[Tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are convenient for
-keeping track of commits that bump a version number. One way of using them is
-together with branches, where we can tag commits in a branch if they bump the
-version number, e.g., a branch called `version/1.1` can have the tags `1.1.1`,
-`1.1.2` etc. Tags can also be used without branches.
+Les [Tags] (https://git-scm.com/book/en/v2/Git-Basics-Tagging) sont pratiques pour
+garder une trace des commits référants un numéro de version. Une façon de les utiliser est
+avec les branches, où nous pouvons marquer les commits dans une branche s'ils changent le
+numéro de version, par exemple, une branche appelée `version/1.1` peut avoir les tags `1.1.1`,
+`1.1.2` etc. Les tags peuvent également être utilisées sans branches.
 
-There are two types of tags, annotated tags and unannotated tags. Annotated tags
-can contain additional information, i.e., you could add some log output, in
-addition to the name. Apart from annotated tags, you can create unannotated tags
-that just have the name. In some cases, tags with no annotations work well,
-because the tag name and the changes of the commit contain the necessary information.
+Il existe deux types de tags, les tags annotées et les tags non annotées. tags annotées
+peuvent contenir des informations supplémentaires, c'est-à-dire que vous pouvez ajouter un message de journal, en plus du nom. Outre les tags annotées, vous pouvez créer des tags non annotées
+qui ont juste le nom. Dans certains cas, les tags sans annotations fonctionnent bien,
+car le nom de la tag et les modifications du commit contiennent les informations nécessaires.
 
-## The task
+## La tâche
 
-For simplicity, we will just work with the master branch in this kata. A couple
-of tags are already created.
+Pour plus de simplicité, nous travaillerons simplement avec la branche master. Un couple
+des tags sont déjà créées.
 
-1. See which tags that were created.
-2. Make a new commit, and introduce a new annotated tag.
-3. We made a couple of commits. Can you add a tag to an arbitrary commit?
-4. The exercise repository contains an annotated tag. What's the message?
-5. Maybe not all of the tags are needed. Delete some of them.
+1. Vérifiez les tags créées.
+2. Effectuez un nouveau commit et introduisez une nouvelle tag annotée.
+3. Nous avons fait quelques commits. Pouvez-vous ajouter une tag à un commit arbitraire?
+4. Le référentiel d'exercices contient une tag annotée. Quel est le message?
+5. Peut-être que toutes les tags ne sont pas nécessaires. Supprimez certains d'entre eux.
 
-## Useful commands
+## Commandes utiles
 - `git tag`
 - `git tag -d <tag>`
-- `git tag --list <pattern>`
+- `git tag --list <modèle>`
 - `git push --tags <branch>`
 - `git rev-parse <tag>`
 - `git show`

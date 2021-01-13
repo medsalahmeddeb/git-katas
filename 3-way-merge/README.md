@@ -1,24 +1,24 @@
-# Git Kata: 3-Way Merge
+# Git Kata: Fusion à 3 voies
 
-## Setup
+## Installer
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
-You again live in your own branch, this time we will be doing a bit of juggling with branches, to show how lightweight branches are in git.
+## La tâche
+Vous êtes à nouveau dans votre propre branche, cette fois nous allons faire un peu de jonglage avec les branches, pour montrer à quel point les branches sont légères dans git.
 
-1. Create a branch called greeting and check it out
-2. Edit the greeting.txt to contain your favorite greeting
-3. Add greeting.txt files to the staging area
-4. Commit
-5. Switch back to the master branch
-6. Create a file README.md with information about this repository
-7. Add the README.md file to staging area and make the commit
-8. What is the output of `git log --oneline --graph --all`?
-9. Diff the branches
-10. Merge the greeting branch into master
+1. Créez une branche appelée greeting et vérifiez-la
+2. Modifiez le message de greeting.txt pour qu'il contienne votre message d'accueil préféré
+3. Ajoutez les fichiers greeting.txt à la zone de préparation (index)
+4. Commitez
+5. Revenez à la branche master
+6. Créez un fichier README.md avec des informations sur ce référentiel
+7. Ajoutez le fichier README.md à l'index et commitez
+8. Quelle est la sortie de `git log --oneline --graph --all`?
+9. Diff les branches
+10. Fusionner la branche greeting dans master
 
-## Useful commands
+## Commandes utiles
 - `git branch`
 - `git branch <branch-name>`
 - `git branch -d <branch-name>`

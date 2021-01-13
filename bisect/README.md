@@ -6,7 +6,7 @@ J'aimerais savoir quel commit a introduit l'échec du test. Mais il semble que c
 
 Essayons d'utiliser `git bisect` pour trouver quel commit a cassé la construction.
 
-Heureusement, j'ai ajouté une balise `initial-commit` lorsque le projet a démarré que nous pouvons utiliser pour commencer à rechercher le bogue.
+Heureusement, j'ai ajouté une tag `initial-commit` lorsque le projet a démarré que nous pouvons utiliser pour commencer à rechercher le bogue.
 
 Pour obtenir de l'aide sur l'utilisation de bisect, je peux toujours lancer `git bisect --help`.
 

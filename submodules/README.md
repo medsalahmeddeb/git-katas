@@ -1,63 +1,63 @@
-# Git Katas: Submodules
+# Git Katas: sous-modules
 
-Submodules are a way to embed other git repositories into your own, retaining a pointer to its `origin`.
-This allows you to grab source changes directly, as well as _pushing_ them back.
+Les sous-modules sont un moyen d'incorporer d'autres dépôts git dans le vôtre, en conservant un pointeur vers son `origine`.
+Cela vous permet de récupérer directement les changements de source, ainsi que de les pusher.
 
-## Setup
+## Installer
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`. \ Setup.ps1` dans PowerShell)
 
-> NOTE: If running setup.sh on windows, you can run into problems by sourcing the setup script. Instead, run `./setup.sh`, and the folders would be created correctly.
+> REMARQUE: si vous exécutez setup.sh sous Windows, vous pouvez rencontrer des problèmes en recherchant le script de configuration. À la place, exécutez `./setup.sh`, et les dossiers seront créés correctement.
 
-## The task
+## La tâche
 
-After running the setup script, you'll be left with three repositories inside the `exercise` folder.
+Après avoir exécuté le script d'installation, il vous restera trois référentiels dans le dossier `exercice`.
 
-* A `component` repository cloned from `remote`.
-* A `product` repository.
-* A `remote` repository. This is the "remote" repository that would exist on your preferred Git repository host, e.g. github.com.
+* Un référentiel `component` cloné depuis` remote`.
+* Un référentiel `product`.
+* Un référentiel `remote`. Il s'agit du référentiel "distant" qui existe sur votre hôte de référentiel Git préféré, par exemple github.com.
 
-Go to the `product` repository.
+Accédez au référentiel `product`.
 
-1. Add component as a submodule of product by running `git submodule add ../remote include`.
-2. What does your working directory look like?
-3. Does `git status` look like you expect?
-4. What if you cd to `include`?
-5. Run `git diff --cached` in `product`. Where can you find the commit id shown in the `+Subproject commit ...` line?
-6. Commit the changes on the `product` repository.
+1. Ajoutez un composant en tant que sous-module de produit en exécutant `git submodule add ../remote include`.
+2. À quoi ressemble votre répertoire de travail?
+3. Est-ce que `git status` ressemble à ce que vous attendez?
+4. Et si vous cd vers "include"?
+5. Exécutez `git diff --cached` dans` product`. Où pouvez-vous trouver l'ID de commit affiché dans la ligne `+Subproject commit ...`?
+6. Validez les modifications sur le référentiel `product`.
 
-Go to the `component` repository.
+Accédez au référentiel `component`.
 
-7. Does it know that it is used as a submodule?
-8. Make a change to the `component` repository and `git commit` and `git push` it.
+7. Sait-il qu'il est utilisé comme sous-module?
+8. Modifiez le dépôt `component` puis `git commit` et `git push`.
 
-Go to the `product` repository.
+Accédez au référentiel `product`.
 
-9. Does `git status` or `git submodule foreach 'git status'` tell you anything about this new commit?
-10. Go to the `include` directory and `git pull` the latest version.
-11. Verify that the change from the `component` repository is available in `include`.
-12. Go to the `product` directory. What is the status now in your product repository? Also examine with `git diff`.
-13. Go to your `include` folder. Make a change and `push` it back to its origin.
+9. Est-ce que `git status` ou` git submodule foreach 'git status'` vous dit quelque chose sur ce nouveau commit?
+10. Allez dans le répertoire `include` et faites `git pull` de la dernière version.
+11. Vérifiez que la modification du référentiel `component` est disponible dans `include`.
+12. Allez dans le répertoire `product`. Quel est le statut actuellement dans votre référentiel de `product`? Examinez également avec `git diff`.
+13. Accédez à votre dossier «include». Faites un changement et pusher-le à son origine.
 
-Go to the `exercise` directory. We will make a clone of product to illustrate how submodules in a clone must be initialized.
+Allez dans le répertoire `exercice`. Nous allons faire un clone de produit pour illustrer comment les sous-modules d'un clone doivent être initialisés.
 
-14. Run `git clone product product_alpha`.
-15. Go to `product_alpha` directory, how does your working directory look, what does the log say and what is in the `include` directory?
-16. Run `git submodule init`, what does your `include` dir look like?
-17. Run `git submodule update`, what does your `include` dir look like now?
-18. Is the latest change from `component` available in include?
+14. Exécutez `git clone product product_alpha`.
+15. Allez dans le répertoire `product_alpha`, à quoi ressemble votre répertoire de travail, que dit le journal et que contient le répertoire` include`?
+16. Lancez `git submodule init`, à quoi ressemble votre répertoire` include`?
+17. Lancez `git submodule update`, à quoi ressemble votre répertoire` include` maintenant?
+18. La dernière modification de «composant» est-elle disponible dans include?
 
-Go to the `product` repository.
+Accédez au référentiel `product`.
 
-19. Commit the changes on the `product` repository.
+19. Validez les modifications sur le référentiel `product`.
 
-Go to the `product_alpha` repository. We'll ensure that we have the latest changes from product.
+Accédez au référentiel `product_alpha`. Nous nous assurerons que nous avons les dernières modifications du produit.
 
-20. Run `git submodule update`.
-19. Is the latest change from `component` available in `include`?
-20. Examine the output of `git submodule status`. Compare the commit id with the `component` repository.
-21. Run `git submodule update --remote`.
-19. Is the latest change from `component` available in include?
-20. Examine the output of `git submodule status`. Compare the commit id with the `component` repository.
+20. Exécutez `git submodule update`.
+19. La dernière modification de `component` est-elle disponible dans` include`?
+20. Examinez la sortie de `git submodule status`. Comparez l'ID de validation avec le référentiel `component`.
+21. Exécutez `git submodule update --remote`.
+19. La dernière modification par rapport à «composant» est-elle disponible dans include?
+20. Examinez la sortie de `git submodule status`. Comparez l'ID de validation avec le référentiel `component`.
 
-Draw this entire exercise!
+Dessinez tout cet exercice!

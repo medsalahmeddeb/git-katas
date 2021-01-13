@@ -1,72 +1,71 @@
-# Git Kata: Git attributes file
+# Git Kata: fichier d'attributs Git
 
-We'll work a bit with the [`.gitattributes`](https://www.git-scm.com/docs/gitattributes)
-file in this kata. In this file, you're able to specify how git handles files, e.g., if they
-are binary or text files. For instance, it's possible to describe what type of
-line ending that should be used, or if you have some binary files in your repository,
-you can specify what program that should be used for showing the diff. The following exercises
-are for GNU/Linux platforms and Mac.
+Nous travaillerons un peu avec les [`.gitattributes`] (https://www.git-scm.com/docs/gitattributes)
+fichier dans ce kata. Dans ce fichier, vous pouvez spécifier comment git gère les fichiers, par exemple s'ils sont des fichiers binaires ou texte. Par exemple, il est possible de décrire quel type de
+fin de ligne à utiliser, ou si vous avez des fichiers binaires dans votre référentiel,
+vous pouvez spécifier le programme à utiliser pour afficher le diff. Les exercices suivants
+sont pour les plates-formes GNU/Linux et Mac.
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-1. Create a `.gitattributes` file with the following content:
+1. Créez un fichier `.gitattributes` avec le contenu suivant:
 
-    `*.txt      text=auto eol=lf working-tree-encoding=UTF-8`
+    `* .txt text = auto eol = lf working-tree-encoding = UTF-8`
 
-2. Run `git add file1.txt .gitattributes` and you should see
+2. Exécutez `git add file1.txt .gitattributes` et vous devriez voir
 
-    `warning: CRLF will be replaced by LF in file1.txt.`
+    `avertissement: CRLF sera remplacé par LF dans file1.txt.`
 
-3. Try to experiment changing `eol` to either `auto` or `crlf`. Can you explain
-   why only one of them changes the line endings of the file, i.e., gives a
-   similar warning as above.
+3. Essayez d'expérimenter en changeant «eol» en «auto» ou «crlf». Peux-tu expliquer
+   pourquoi un seul d'entre eux modifie les fins de ligne du fichier, c'est-à-dire donne un
+   avertissement similaire à celui ci-dessus.
 
-4. Some files must have DOS (CRLF) line endings in order to work. One such example
-   is bat-files, e.g., Jenkins requires the line endings in bat-files to be CRLF before
-   being able to run them.
+4. Certains fichiers doivent avoir des fins de ligne DOS (CRLF) pour fonctionner. Un tel exemple
+   is bat-files, par exemple, Jenkins requiert que les fins de ligne dans les bat-files soient CRLF avant
+   être en mesure de les exécuter.
 
-   `*.bat      text=auto eol=crlf`
+   `* .bat text = auto eol = crlf`
 
-   A similar problem is present with Linux scripts using a shebang in the first line to point
-   to an interpreter. GNU/Linux systems will have a problem running them, e.g., `bash\r` is not
-   recognized as an interpreter.
+   Un problème similaire est présent avec les scripts Linux utilisant un shebang dans la première ligne pour pointer
+   à un interprète. Les systèmes GNU/Linux auront un problème à les exécuter, par exemple, `bash\r` n'est pas
+   reconnu comme interprète.
 
-5. Git is mostly suitable for text files, but it can also handle binary files
-   and you can set programs to show the diff. You need to have installed exif (or exiftool)
-   for this to work. If you don't have a png image on your machine, you can use:
+5. Git est principalement adapté aux fichiers texte, mais il peut également gérer les fichiers binaires
+   et vous pouvez définir des programmes pour afficher le diff. Vous devez avoir installé exif (ou exiftool)
+   pour que cela fonctionne. Si vous n'avez pas d'image png sur votre machine, vous pouvez utiliser:
    https://www.freepngimg.com/download/mario/20698-7-mario-transparent-background.png
 
-    `*.png diff=exif`
+    `* .png diff = exif`
 
-6. Replace the image, e.g., using this one which is a smaller version of the image
+6. Remplacez l'image, par exemple, en utilisant celle-ci qui est une version plus petite de l'image
   https://www.freepngimg.com/download/temp/20698-7-mario-transparent-background_400x400.png
 
-  Now, run git diff,and you can see which attributes that were changed.
+  Maintenant, exécutez git diff, et vous pouvez voir quels attributs ont été modifiés.
 
-7. The line endings can also be controlled through 
-   [`git config`](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration):
+7. Les fins de ligne peuvent également être contrôlées via
+   [`git config`] (https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration):
 
-    git config --global core.autocrlf input
-  
-   This will make sure that the repository always contains LF line endings, as line
-   endings are converted to LF on pushes. The configuration can also be set to `true` 
-   and `false`. You can experiment a bit with this.
+    git config --global core.autocrlf entrée
 
-## Useful commands
+   Cela garantira que le référentiel contient toujours des fins de ligne LF, comme line
+   les fins sont converties en LF lors des poussées. La configuration peut également être définie sur «true»
+   et «faux». Vous pouvez expérimenter un peu avec cela.
 
-- `file file1.txt` (on GNU/Linux and Mac)
+## Commandes utiles
+
+- `file file1.txt` (sous GNU/Linux et Mac)
 - `git add`
 - `git status`
-- `iconv` is useful for converting between different character encodings.
+- `iconv` est utile pour la conversion entre différents encodages de caractères.
 
-## Additional information
+## Information additionnelle
 
-The `.gitattributes` has another alternative, if you are just interested in
-having the same line endings and character encodings across the files in your
-repository. [editorconfig](https://editorconfig.org/) can handle indentation
-size (useful for Python), whether to use tabs or spaces, adding a final newline
+Le `.gitattributes` a une autre alternative, si vous êtes simplement intéressé par
+ayant les mêmes fins de ligne et encodages de caractères dans les fichiers de votre
+dépôt. [editorconfig] (https://editorconfig.org/) peut gérer l'indentation
+size (utile pour Python), s'il faut utiliser des tabulations ou des espaces, ajouter une dernière nouvelle ligne
 etc.

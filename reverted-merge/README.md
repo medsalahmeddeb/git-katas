@@ -1,52 +1,51 @@
-# Git Kata: Reverted merge
+# Git Kata: fusion annulée
 
-In this kata, we explore the problems of reverting a merge commit.
+Dans ce kata, nous explorons les problèmes d'annulation d'un commit de fusion.
 
-## The story
+## L'historique
 
-Your team uses this amazing library-1.2.3 for its development, which is
-maintained by another team.
+Votre équipe utilise cette  bibliothèque-1.2.3 pour son développement, qui est
+maintenu par une autre équipe.
 
-At some point, your team integrates a new version library-1.2.4. Because you are
-prudent, you do this on a branch `integrate-library-1.2.4`.
+À un moment donné, votre équipe intègre une nouvelle version de la bibliothèque-1.2.4. Parce que vous êtes prudent, vous faites cela sur une branche `integrer-library-1.2.4`.
 
-Unfortunately, you discover after your merge that the library has a bug, which
-has to be fixed by this other team. To prevent the bug from being released into
-production, you decide to revert the merge commit.
+Malheureusement, vous découvrez après votre fusion que la bibliothèque a un bogue qui
+doit être réparé par cette autre équipe. Pour éviter que le bogue ne soit diffusé dans
+production, vous décidez d'annuler la validation de fusion.
 
-## Setup
+## Installer
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-1. Revert the merge commit. To resolve the conflict, you need to determine what
-features should be included in `mymodule.txt`.
-   * You can tell whether feature X should be included or not by when it was
-     commited.
-   * You may assume that feature Y is also working with the old library version.
-2. Take the role of the library team and fix the bug in the library on the
-   integrate branch, e.g. change `lib.txt`.
-3. Next we explore how you can get the changes from the branch into the master
-   again. First try to merge to see what happens. The `lib.txt` file changes as
-       expected, but '`mymodule.txt` does not. For an in depth discussion of
-       the reason why consult this gist: [Reverting a faulty merge](https://github.com/git/git/blob/master/Documentation/howto/revert-a-faulty-merge.txt).
->  reverting a merge commit also
->  undoes the _data_ that the commit changed, but it does absolutely
->  nothing to the effects on _history_ that the merge had.
+1. Annulez la validation de fusion. Pour résoudre le conflit, vous devez déterminer
+les fonctionnalités qui doivent être incluses dans `mymodule.txt`.
+   * Vous pouvez dire si la fonctionnalité X doit être incluse ou non au moment où elle l'a été
+     commitée.
+   * Vous pouvez supposer que la fonctionnalité Y fonctionne également avec l'ancienne version de la bibliothèque.
+2. Prenez le rôle de l'équipe de la bibliothèque et corrigez le bogue dans la bibliothèque sur
+    la branche de l'intégration, par ex. changez `lib.txt`.
+3. Ensuite, nous explorons comment vous pouvez obtenir les modifications de la branche dans le master
+   encore. Essayez d'abord de fusionner pour voir ce qui se passe. Le fichier `lib.txt` change comme
+       attendu, mais pas «mymodule.txt». Pour une discussion approfondie sur
+       la raison consulter ce lien: [Rétablissement d'une fusion défectueuse] (https://github.com/git/git/blob/master/Documentation/howto/revert-a-faulty-merge.txt).
+> annulation d'un commit de fusion également
+> annule les _data_ que le commit a modifiées, mais il n' a
+> aucun effet sur _historique_ que la fusion a eu.
 >
->  So the merge will still exist, and it will still be seen as joining
->  the two branches together, and future merges will see that merge as
->  the last shared state
+> La fusion existera donc toujours, et elle sera toujours considérée comme
+> les deux branches ensemble, et les futures fusions verront cette fusion comme
+> le dernier état partagé
 
-4. Undo the merge with a reset --hard
-5. Revert the revert and try the merge again. This time it works.
+4. Annulez la fusion avec une réinitialisation --hard
+5. Annulez la restauration et réessayez la fusion. Cette fois ça marche.
 
-## Useful commands
+## Commandes utiles
 
 * `git revert -m 1 <merge-sha1>`
 * `git log --oneline --graph --all`
-* `git add <file-name>`
+* `git add <nom-fichier>`
 * `git revert --continue`
 * `git checkout <branch-name>`
 * `git merge <branch-name>`

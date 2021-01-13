@@ -1,25 +1,24 @@
-# Detached head state
+# HEAD détaché
 
-When a user ends up in a "detached head" state, this is a scary situation, but as we know, Git is not scary.
+Lorsqu'un utilisateur se retrouve dans un état de "Detached HEAD", c'est une situation effrayante, mais comme nous le savons, Git ne fait pas peur.
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-1. Run `git status` and `git log --oneline --graph --all` to see what is going on.
-2. Restore normalcy in this repository by moving to `master`
+1. Exécutez `git status` et` git log --oneline --graph --all` pour voir ce qui se passe.
+2. Restaurez l'état normal dans ce référentiel en passant à `master`
 
-Note that this task might seem more confusing if you did not run `setup.sh` in your terminal.
+Notez que cette tâche peut sembler plus déroutante si vous n'avez pas exécuté `setup.sh` dans votre terminal.
 
-We want to have a branch called `the-beginning` that is made from the first commit with message `A`. 
+Nous voulons avoir une branche appelée «the-begin» qui est faite à partir du premier commit avec le message «A».
 
-3. Can you do this by first causing a detached head?
+3. Pouvez-vous faire cela en provoquant d'abord un Detached HEAD?
 
-## Useful commands
+## Commandes utiles
 
 - `git status`
 - `git log --oneline --graph --all`
 - `git checkout <ref>`
-

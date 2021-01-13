@@ -7,7 +7,7 @@ Vous devriez corriger cela pour que votre `git log` soit beau!
 
 Pour ce faire, nous utiliserons notre bon ami `git rebase --interactive`
 
-Heureusement, nous avons un tag de publication `v0.0` juste avant le démarrage de la fonctionnalité.
+Heureusement, nous avons un tag de release `v0.0` juste avant le démarrage de la fonctionnalité.
 
 Comme il s'agit d'un exercice avancé, il n'y a pas d'étapes spécifiques à suivre ni de solution unique.
 
