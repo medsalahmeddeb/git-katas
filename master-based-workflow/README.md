@@ -1,35 +1,35 @@
-# Master based workflow
+# Flux de travail basé sur le master
 
-In this kata we will practice the workflow commonly known as "master based workflow". It is sometimes called Centralized workflow or simplified workflow. Collaboration works by pushing to and pulling from the master branch. This workflow is good for simple projects, or solo projects.
+Dans ce kata, nous allons pratiquer le workflow communément appelé "workflow basé sur le master". Il est parfois appelé flux de travail centralisé ou flux de travail simplifié. La collaboration fonctionne en poussant vers et en tirant de la branche master. Ce flux de travail convient aux projets simples ou aux projets solo.
 
-We will work with a fake remote repository, that serves as a standin for one hosted by a service like GitHub or Bitbucket.
+Nous travaillerons avec un faux dépôt distant, qui sert de support à celui hébergé par un service comme GitHub ou Bitbucket.
 
-## Setup
+## Installer
 
-Run `source setup.sh` (or `.\setup.ps1` in PowerShell) to setup the exercise.
+Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell) pour configurer l'exercice.
 
-## Task
+## Tâche
 
-1. Get a local instance of the remote by running the command `git clone fake-remote-repository local-repo`
-2. Change to the local repository with the command `cd local-repo`
-3. Add a line of text to `README.md`
-4. Commit the change 
-5. Run `git status` and notice how your local master branch relates to the remote master branch
-6. Push the change to the remote using the command `git push`
-7. Run `git status` to see that you are up-to-date
-8. Add another line of text to `README.md`
-9. Commit the change
-10. Run the command `../fitzgerald-pushes-before-we-do.sh` (or `..\fitzgerald-pushes-before-we-do.ps1` in PowerShell) to simulate a collaborator delivering changes to the fake remote
-11. Push your change. Notice that they are rejected by the remote
-12. Run the command `git fetch` to retrieve the changes from the fake remote
-13. Run `git status` to see how your `master` branch and the remote `master` branch have diverged
-14. Run `git merge origin/master` to apply the changes from the fake remote to your master branch
-15. Run `git status` to see the how the local and remote master branches relate
-16. Run `git log --all --oneline --decorate --graph` to see the merge commit on the master branch
-17. Run `git push` to deliver your changes to the fake-remote
-18. Run `git status` to see that your `master` branch is up-to-date and has no undelivered changes
+1. Obtenez une instance locale du remote en exécutant la commande `git clone fake-remote-repository local-repo`
+2. Passez au référentiel local avec la commande `cd local-repo`
+3. Ajoutez une ligne de texte à `README.md`
+4. Validez le changement
+5. Exécutez `git status` et notez comment votre branche master locale est liée à la branche master distante
+6. Envoyez la modification à remote en utilisant la commande `git push`
+7. Exécutez `git status` pour voir que vous êtes à jour
+8. Ajoutez une autre ligne de texte à `README.md`
+9. Validez le changement
+10. Exécutez la commande `../ fitzgerald-pushes-before-we-do.sh` (ou` ..\fitzgerald-pushes-before-we-do.ps1` dans PowerShell) pour simuler un collaborateur apportant des modifications au fake-remote
+11. Poussez votre changement. Notez qu'ils sont rejetés par remote
+12. Exécutez la commande `git fetch` pour récupérer les modifications de fake-remote
+13. Exécutez `git status` pour voir comment votre branche `master` et la branche distante `master` ont divergé
+14. Exécutez `git merge origin/master` pour appliquer les modifications de fake-remote à votre branche master
+15. Exécutez `git status` pour voir comment les branches master locales et distantes sont liées
+16. Exécutez `git log --all --oneline --decorate --graph` pour voir le commit de fusion sur la branche master
+17. Exécutez `git push` pour fournir vos modifications à fake-remote
+18. Exécutez `git status` pour voir que votre branche `master` est à jour et n'a pas de modifications non livrées
 
-## Relevant commands
+## Commandes pertinentes
 
 - `git push`
 - `git fetch`

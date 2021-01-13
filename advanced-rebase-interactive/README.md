@@ -1,32 +1,31 @@
-# gitkatas
-## Advanced interactive rebase
-You have worked on a new feature called Hello World.
-This features ends up being complete with both documentation and unit test, but there are a few problems.
-The history looks really messy, with lots of small half-finished steps, and there are things included that should never have been there.
+# Rebase interactif avancé
+Vous avez travaillé sur une nouvelle fonctionnalité appelée Hello World.
+Cette fonctionnalité finit par être complète avec la documentation et le test unitaire, mais il y a quelques problèmes.
+L'historique semble vraiment désordonnée, avec beaucoup de petites étapes à moitié, et il y a des choses incluses qui n'auraient jamais dû être là.
 
-You should fix this such that your `git log` looks great!
+Vous devriez corriger cela pour que votre `git log` soit beau!
 
-To do this we will use our good friend `git rebase --interactive`
+Pour ce faire, nous utiliserons notre bon ami `git rebase --interactive`
 
-Luckily we have a release tag `v0.0` from just before we started the feature.
+Heureusement, nous avons un tag de publication `v0.0` juste avant le démarrage de la fonctionnalité.
 
-As this is an advanced exercise, there are no specific steps to follow and no single solution.
+Comme il s'agit d'un exercice avancé, il n'y a pas d'étapes spécifiques à suivre ni de solution unique.
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## Task
+## Tâche
 
-1. Explore the repo and the history so you know what happened
-2. Use `git rebase --interactive v0.0` to let you edit the "recipe" for the entire feature development.
-3. Clean up the history such that it actually makes sense. Try to use as many of the rebase "features" (e.g. reword, squash, fixup, drop) as possible. You decide yourself if you want to rewrite the whole thing in one go, or apply a few changes first, then run a new `git rebase --interactive v0.0` to keep cleaning.
+1. Explorez le repo et l'historique pour savoir ce qui s'est passé
+2. Utilisez `git rebase --interactive v0.0` pour vous permettre d'éditer la "recette" du développement de la fonctionnalité.
+3. Nettoyez l'historique de manière à ce qu'il ait un sens. Essayez d'utiliser autant de "fonctionnalités" de rebase (par exemple, reword, squash, fixup, drop) que possible. Vous décidez vous-même si vous voulez réécrire le tout en une seule fois, ou appliquer d'abord quelques changements, puis exécuter un nouveau `git rebase --interactive v0.0` pour continuer à nettoyer.
 
-### useful commands
+### commandes utiles
 
-- `ls -l`                 # list files
-- `tail -n +1 *`          # show content of all files
-- `git log --oneline`     # show history
-- `git log --stat`        # log which files changed
-- `git log --patch`       # log with diff
-- `git rebase -i <ref>`   # run the interactive rebase back to <ref>
+- `ls -l` # liste les fichiers
+- `tail -n +1 *` # affiche le contenu de tous les fichiers
+- `git log --oneline` # affiche l'historique
+- `git log --stat` # log les fichiers qui ont été changé
+- `git log --patch` # log avec diff
+- `git rebase -i <ref>` # exécuter le rebase interactif vers <ref>

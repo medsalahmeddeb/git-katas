@@ -1,44 +1,44 @@
 # Bisect
 
-The master branch is broken, now I wish we used pretested integration. I have been gone some days on vacation and now when I'm back I realize that master is broken and has been broken for a while. All the pull requests have been working but everyone have been too busy to realize that the master build is failing.
+La branche master est cassée, maintenant je souhaite que nous utilisions l'intégration prétestée. Je suis parti quelques jours en vacances et maintenant, quand je suis de retour, je me rends compte que le master est brisé et qu'il est brisé depuis un moment. Toutes les demandes d'extraction ont fonctionné mais tout le monde a été trop occupé pour se rendre compte que la construction principale échoue.
 
-I would like to know what commit introduced the test failure. But it seems that it's too hard to figure out by hand, the test is complicated and there are so many commits to go through and no one changed the test script.
+J'aimerais savoir quel commit a introduit l'échec du test. Mais il semble que ce soit trop difficile à comprendre à la main, le test est compliqué et il y a tellement de commits à passer et personne n'a changé le script de test.
 
-Let's try to use `git bisect` to find what commit broke the build.
+Essayons d'utiliser `git bisect` pour trouver quel commit a cassé la construction.
 
-Luckily I added a tag `initial-commit` when the project started which we can use to start searching for the bug.
+Heureusement, j'ai ajouté une balise `initial-commit` lorsque le projet a démarré que nous pouvons utiliser pour commencer à rechercher le bogue.
 
-To get help on how to use bisect I can always run `git bisect --help`.
+Pour obtenir de l'aide sur l'utilisation de bisect, je peux toujours lancer `git bisect --help`.
 
-To run the tests I can execute the test script:
-```
+Pour exécuter les tests, je peux exécuter le script de test:
+''
 $ ./test.sh
-```
-## Setup:
+''
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## Tasks
+## Tâches
 
-1. Use `git bisect` to locate the bad commit
+1. Utilisez `git bisect` pour localiser le mauvais commit
 
-## Verify
+## Vérifier
 
-When I'm done I may test the solution with the verify script
+Lorsque j'ai terminé, je peux tester la solution avec le script de vérification
 
-```bash
+`` bash
 $ cd ..
-$ ./verify.sh # or .\verify.ps1` in PowerShell
-```
+$ ./verify.sh # ou.\verify.ps1` dans PowerShell
+''
 
-## If I get stuck
+## Si je suis coincé
 
-I found this manual that I can use if I get stuck:
+J'ai trouvé ce manuel que je peux utiliser si je suis bloqué:
 
 
-```
+''
 $ git bisect start
-$ git bisect bad
-$ git bisect good initial-commit
+$ git bisect mauvais
+$ git bisect bon initial-commit
 $ git bisect run './test.sh'
-```
+''

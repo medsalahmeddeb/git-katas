@@ -1,30 +1,30 @@
-# Git Kata: change author
+# Git Kata: changer d'auteur
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
 
-## The task
+## La tâche
 
-You finally convinced yourself that you should start with the open source project idea you've cherished for so long.
-But alas, you realized after the first few commits that you forgot to setup your username and email.
+Vous vous êtes enfin convaincu que vous devriez commencer avec l'idée de projet open source que vous chérissez depuis si longtemps.
+Mais hélas, vous vous êtes rendu compte après les premiers commits que vous avez oublié de configurer votre nom d'utilisateur et votre adresse e-mail.
 
-Your workplace is kind enough to let you use your work computer to contribute to open source projects, but this also means that your new git repo used the global config on your machine, i.e. your work name and email.
-On top of all that you've already pushed the first few commits to your remote repository.
+Votre entreprise est assez aimable pour vous permettre d'utiliser votre ordinateur de travail pour contribuer à des projets open source, mais cela signifie également que votre nouveau référentiel git a utilisé la configuration globale sur votre machine, c'est-à-dire votre nom de travail et votre adresse e-mail.
+En plus de tout cela, vous avez déjà poussé les premiers commits vers votre référentiel distant.
 
-No worries, you remember something about [setting up configs](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration), [rebasing](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History).
+Pas de soucis, vous vous souvenez de quelque chose sur [la configuration des configurations] (https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration), [rebasing] (https: // git-scm. com/book/en/v2/Git-Tools-Rewriting-History).
 
-You also remember that changing the config will only change the `committer` of a commit but not its `author`, so you'll also need to [set](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---authorltauthorgt) or [reset](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---reset-author) the author.
-You know that you need to rebase all the way from the the [root commit](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---root).
+Vous vous souvenez également que changer la configuration ne changera que le `committer` d'un commit mais pas son` author`, donc vous devrez également [set] (https://git-scm.com/docs/git-commit # Documentation/git-commit.txt --- authorltauthorgt) ou [reset] (https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---reset-author) l'auteur .
+Vous savez que vous devez rebaser complètement à partir de la [racine commit] (https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---root).
 
-Thankfully you just started the project so you can still [force push](https://git-scm.com/docs/git-push#Documentation/git-push.txt--f) without fear of messing up ([The Perils of Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)) someone elses local repo.
+Heureusement, vous venez de démarrer le projet afin que vous puissiez toujours [forcer la poussée] (https://git-scm.com/docs/git-push#Documentation/git-push.txt--f) sans craindre de gâcher ([Le Perils of Rebasing] (https://git-scm.com/book/en/v2/Git-Branching-Rebasing)) quelqu'un d'autre repo local.
 
-## Useful commands
-- `git config --local user.name "my name"`
-- `git config --local user.email "myemail@home.com"`
+## Commandes utiles
+- `git config --local user.name" mon nom "`
+- `git config --local user.email" myemail@home.com "`
 - `git rebase -i --root`
-- `git commit --amend --author="my name <myemail@home.com>" --no-edit`
+- `git commit --amend --author =" mon nom <myemail@home.com> "--no-edit`
 - `git commit --amend --reset-author --no-edit`
 - `git rebase --continue`
 - `git push --force`

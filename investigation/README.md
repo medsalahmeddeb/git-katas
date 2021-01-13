@@ -1,19 +1,19 @@
-# Git Kata: Git objects
+# Git Kata: objets Git
 
-Objects are stored in `<repository>/.git/objects` in subfolders matching the first two chars of the sha.
-`fc1da6e8f` is therefore the file: `.git/objects/fc/1da6e8f`.
+Les objets sont stockés dans `<repository>/.git/objects` dans des sous-dossiers correspondant aux deux premiers caractères du SHA.
+`fc1da6e8f` est donc le fichier:` .git/objects/fc/1da6e8f`.
 
-`git cat-file` inflates and shows the content of whatever _ref_ you pass it.
-`-p` asks `cat-file` to pretty-print the content of an object.
+`git cat-file` montre le contenu de tout _ref_ que vous lui passez.
+`-p` demande à` cat-file` de bien imprimer le contenu d'un objet.
 
-`git ls-tree master .` inflates and lists the content of a folder.
+`git ls-tree master .` liste le contenu d'un dossier.
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## Task
+## Tâche
 
-1. Using `git ls-tree` and `git cat-file`, draw the entire Git data structure.
-	- What tree and blob objects do you have and what do they point at?
-	- What commits point inside this graph and where?
+1. En utilisant `git ls-tree` et` git cat-file`, dessinez toute la structure de données Git.
+- Quels objets d'arbre et de blob avez-vous et vers quoi pointent-ils?
+- Qu'est-ce que les commits pointent à l'intérieur de ce graphique et où?

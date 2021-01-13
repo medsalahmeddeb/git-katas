@@ -1,28 +1,28 @@
-# Git Kata: Basic revert
-## Setup:
+# Git Kata: retour de base
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-In this task a few changes snuck in, that we'd like to get out. Our history is public, so we can't just change it. Rather we need to use revert to remove the unwanted changes in a safe way.
+Dans cette tâche, quelques changements se sont introduits, que nous aimerions éliminer. Notre historique est publique, nous ne pouvons donc pas simplement la changer. Nous devons plutôt utiliser revert pour supprimer les modifications indésirables de manière sûre.
 
-1. Use `git log --decorate --oneline` to look at the history
-2.  Use `cat` to view the content of `greeting.txt`
-3.  Use `git revert` on the newest commit, to remove the changes the last commit added
-4.  Use `git log --decorate --oneline` to view the history
-5.  Did the revert command add or remove a commit?
-6.  Use `cat` to view the content of `greeting.txt`
-7.  Use `ls` to see the content of the workspace
-8.  Use `git log --decorate --oneline` to find the sha of the commit adding credentials to the repository
-9.  Use `git revert` to revert the commit that added the credentials
-10. Use `git log --decorate --oneline` to view the history
-11. Use `ls` to see the content of the workspace
-12. How many commits were added or changed by the last revert?
-13. Use `git show` with the sha of the commit you reverted to see that the credentials file is stilll in the history
+1. Utilisez `git log --decorate --oneline` pour consulter l'historique
+2. Utilisez `cat` pour afficher le contenu de `greetings.txt`
+3. Utilisez `git revert` sur le dernier commit, pour supprimer les changements du dernier commit ajouté
+4. Utilisez `git log --decorate --oneline` pour afficher l'historique
+5. La commande revert a-t-elle ajouté ou supprimé un commit?
+6. Utilisez `cat` pour afficher le contenu de `greetings.txt`
+7. Utilisez `ls` pour voir le contenu de l'espace de travail
+8. Utilisez `git log --decorate --oneline` pour trouver le SHA du commit qui ajoute les informations d'identification au référentiel
+9. Utilisez `git revert` pour annuler la validation qui a ajouté les informations d'identification
+10. Utilisez `git log --decorate --oneline` pour afficher l'historique
+11. Utilisez `ls` pour voir le contenu de l'espace de travail
+12. Combien de commits ont été ajoutés ou modifiés lors du dernier retour?
+13. Utilisez `git show` avec le SHA du commit que vous avez rétabli pour voir que le fichier d'identifiants est toujours dans l'historique
 
 
-## Useful commands
+## Commandes utiles
 - `git revert <ref>`
 - `git log --decorate --oneline`
 - `git show <ref>`

@@ -1,31 +1,31 @@
 # gitkatas
 
-## Bad Commit
+## Mauvaise validation
 
-One of the commits on `master` introduced a bad file.
-Find the commit and revert it using bisect.
+Un des commits sur `master` a introduit un mauvais fichier.
+Trouvez le commit et annulez-le en utilisant la **bisect**.
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-Use `git bisect` to find the "bad" commit and then use `git revert` to revert it. When running `git bisect`, you indicate if the "state" is "good" or "bad" until it finds the commit that introduced the change.
+Utilisez `git bisect` pour trouver le" mauvais "commit, puis utilisez `git revert` pour le restaurer. Lors de l'exécution de `git bisect`, vous indiquez si le "state" est "good" ou "bad" jusqu'à ce qu'il trouve le commit qui a introduit le changement.
 
-For this exercise, the version is bad if `badfile` exists.
+Pour cet exercice, la version est mauvaise si «badfile» existe.
 
-1. Start `git bisect`.
-2. Usually the HEAD is "bad", as it is in this exercise. Use `git bisect bad` to indicate it.
-3. Usually some old version will be good. In this exercise, the start version is. Use `git bisect good <commit-ish>` to indicate it.
-4. `git bisect` will then checkout various commits to find the bad commit. Continue indicating the state until it tells you the first bad commit. Keep track of this commit.
-5. Run `git bisect reset` so we can work on the repository.
-6. Use `git diff` to make sure that the bad commit only introduced `badfile`.
-7. Use `git revert` to it.
+1. Démarrez `git bisect`.
+2. Habituellement, le HEAD est "bad", comme c'est le cas dans cet exercice. Utilisez `git bisect bad` pour l'indiquer.
+3. Habituellement, une ancienne version sera bonne. Dans cet exercice, la version de démarrage l'est. Utilisez `git bisect good <commit-ish>` pour l'indiquer.
+4. `git bisect` vérifiera ensuite divers commits pour trouver le mauvais commit. Continuez à indiquer l'état jusqu'à ce qu'il vous indique le premier mauvais commit. Gardez une trace de ce commit.
+5. Exécutez `git bisect reset` pour que nous puissions travailler sur le référentiel.
+6. Utilisez `git diff` pour vous assurer que le mauvais commit n'a introduit que` badfile`.
+7. Utilisez `git revert` dessus.
 
-If you have a script that can tell if the current source code is good or bad, you can bisect by issuing `git bisect run`.
+Si vous avez un script qui peut dire si le code source actuel est bon ou mauvais, vous pouvez couper en deux en lançant `git bisect run`.
 
-## Useful commands
+## Commandes utiles
 
 - `git bisect start`
 - `git bisect bad`
@@ -35,5 +35,5 @@ If you have a script that can tell if the current source code is good or bad, yo
 - `git diff <commit-ish-1> <commit-ish-2>`
 - `git revert <commit-ish>`
 - `git bisect run <cmd>`
-- `test ! -f badfile` (or `gci . badfile` in PowerShell) to test the existence of a file
-- `test ! -f badfile;echo $?` to output the result of the test to the console
+- `test !-f badfile` (ou `gci. badfile` dans PowerShell) pour tester l'existence d'un fichier
+- `test !-f badfile; echo $?`pour afficher le résultat du test sur la console

@@ -1,21 +1,21 @@
-# Git Kata: Basic cleaning
+# Git Kata: nettoyage de base
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
-You are working on a project that involves generated files.  Say you are compiling C files into object files. Before checking out a new branch you want to start clean
+## La tâche
+Vous travaillez sur un projet qui implique des fichiers générés. Supposons que vous compiliez des fichiers C en fichiers objets. Avant de checkout une nouvelle branche, vous souhaitez nettoyer.
 
-1. Explore the directory with `ls -R`. There is a lot going on.  Code files, temp files, object files,..  Let's clean up!
-2. Just to be safe, do a dry run and execute the clean command with the ` -n` option
-3. Oh noes!  there's a `.c` file that would have been deleted!
-4. Add `src/mylib.c` to the staging area. don't commit it.
-5. Run the clean command with the ` -n` option. Notice that mylib.c will not be deleted. Also notice that the files in the obj directory are not listed
-6. Run the clean command with the ` -n -d ` option.
-7. Looks good! clean the repo ` -f -d `
+1. Explorez le répertoire avec `ls -R`. Il se trouve beaucoup de choses. Fichiers de code, fichiers temporaires, fichiers objets, .. Nettoyons!
+2. Juste pour être sûr, faites un essai à sec et exécutez la commande clean avec l'option `-n`
+3. Oh non! il y a un fichier `.c` qui aurait été supprimé!
+4. Ajoutez `src/mylib.c` à la zone de préparation. ne le commitez pas.
+5. Exécutez la commande clean avec l'option `-n`. Notez que mylib.c ne sera pas supprimé. Notez également que les fichiers du répertoire obj ne sont pas répertoriés
+6. Exécutez la commande clean avec l'option `-n -d`.
+7. Ça a l'air bien! nettoyer le dépôt `-f -d`
 
-## Useful commands
+## Commandes utiles
 - `git clean -n`
 - `git add`
 - `git clean -n -d`

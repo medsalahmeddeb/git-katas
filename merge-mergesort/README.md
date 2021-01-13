@@ -1,30 +1,29 @@
 # Git Kata: Merge Mergesort
-In this kata you will be facing your first merge conflict!
-There will be two different branches:
+Dans ce kata, vous serez confronté à votre premier conflit de fusion!
+Il y aura deux branches différentes:
 
 * Mergesort-Impl
 * master
 
-The task is to look at the merge conflict, and solve it by editing the file accordingly.
+La tâche consiste à examiner le conflit de fusion et à le résoudre en modifiant le fichier en conséquence.
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou `.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-1. Run `git branch` to see the two branches present
-2. Merge `Mergesort-Impl` into `master`
-3. Either:
-   1. Solve the merge conflict with your favorite editor and finish the merge (`git status` will tell you what to do), **or**
-   2. Use `git mergetool --tool=emerge` (for emacs fans) or `git mergetool --tool=vimdiff` (for vim fans) and finish the merge (`git status` will tell you what to do)
+1. Exécutez `git branch` pour voir les deux branches présentes
+2. Fusionnez `Mergesort-Impl` dans `master`
+3. Soit:
+    1. Résolvez le conflit de fusion avec votre éditeur préféré et terminez la fusion (`git status` vous dira quoi faire), **ou**
+    2. Utilisez `git mergetool --tool=emerge` (pour les fans emacs) ou` git mergetool --tool=vimdiff` (pour les fans de vim) et terminez la fusion (`git status` vous dira quoi faire)
 
-## Relevant commands
+## Commandes pertinentes
 - `git branch`
 - `git merge`
 - `git status`
-- `git mergetool --tool=emerge`
-- `git mergetool --tool=vimdiff`
+- `git mergetool --tool = emerge`
+- `git mergetool --tool = vimdiff`
 - `git add`
 - `git commit`
-

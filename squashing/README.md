@@ -1,70 +1,70 @@
-# Squash commits
+# Squash s'engage
 
-In this kata I would like to clean up my history a bit.
+Dans ce kata, je voudrais nettoyer un peu mon historique.
 
-The five newest commits all tinker with file.txt which obviously contains my feature.
+Les cinq derniers commits tous bricolent avec file.txt qui contient évidemment ma fonctionnalité.
 
-I would like these commits to be squashed into a single commit!
+Je voudrais que ces commits soient écrasés en un seul commit!
 
-While you are at it I would really like the ugly `\n` characters inside `file.txt` to be removed from the history.
+Pendant que vous y êtes, on voudrai vraiment que les caractères `\n` dans` file.txt` soient supprimés de l'historique.
 
-## Setup
+## Installer
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-1. _Squash_ the five relevant commits into one and make a good commit message (see Further information).
-2. How does `git log` look now?
-3. Clean up the `\n` characters inside `file.txt` without adding to the commit history.
+1. _Squash_ les cinq commits pertinents en un seul et faire un bon message de commit (voir plus d'informations).
+2. À quoi ressemble `git log` maintenant?
+3. Nettoyez les caractères `\n` dans` file.txt` sans ajouter à l'historique des commits.
 
-## Useful commands
+## Commandes utiles
 
 - `git rebase -i <ref>`
 - `git add`
 - `git commit --amend`
 
-## Further information
+## Plus d'informations
 
-### The seven rules of a great Git commit message
+### Les sept règles d'un excellent message de commit Git
 
-From [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+Depuis [Comment écrire un message de validation Git] (https://chris.beams.io/posts/git-commit/)
 
-1. Separate subject from body with a blank line
-2. Limit the subject line to 50 characters
-3. Capitalize the subject line
-4. Do not end the subject line with a period
-5. Use the imperative mood in the subject line
-6. Wrap the body at 72 characters
-7. Use the body to explain what and why vs. how
+1. Séparez le sujet du corps par une ligne vierge
+2. Limitez la ligne d'objet à 50 caractères
+3. Mettez en majuscule la ligne d'objet
+4. Ne terminez pas la ligne d'objet par un point
+5. Utilisez l'impératif dans la ligne d'objet
+6. Retourner à la ligne à 72 caractères dans le corps
+7. Utilisez le corps pour expliquer quoi et pourquoi et comment
 
-Example
-```
-Summarize changes in around 50 characters or less
+Exemple
+''
+Résumez les changements en environ 50 caractères ou moins
 
-More detailed explanatory text, if necessary. Wrap it to about 72
-characters or so. In some contexts, the first line is treated as the
-subject of the commit and the rest of the text as the body. The
-blank line separating the summary from the body is critical (unless
-you omit the body entirely); various tools like `log`, `shortlog`
-and `rebase` can get confused if you run the two together.
+Texte explicatif plus détaillé, si nécessaire. Enveloppez-le à environ 72
+caractères ou plus. Dans certains contextes, la première ligne est traitée comme
+sujet du commit et le reste du texte comme corps. le
+une ligne vide séparant le résumé du corps est critique (sauf si
+vous omettez entièrement le corps); divers outils comme `log`,` shortlog`
+et `rebase` peut devenir confus si vous exécutez les deux ensemble.
 
-Explain the problem that this commit is solving. Focus on why you
-are making this change as opposed to how (the code explains that).
-Are there side effects or other unintuitive consequences of this
-change? Here's the place to explain them.
+Expliquez le problème que ce commit résout. Concentrez-vous sur pourquoi vous
+avez fait ce changement plutôt que comment (le code l'explique).
+Y'a-t-il des effets secondaires ou d'autres conséquences non intuitives au
+changement? Voici l'endroit pour les expliquer.
 
-Further paragraphs come after blank lines.
+D'autres paragraphes viennent après des lignes vierges.
 
- - Bullet points are okay, too
+ - Les points à puces sont bien aussi
 
- - Typically a hyphen or asterisk is used for the bullet, preceded
-   by a single space, with blank lines in between, but conventions
-   vary here
+ - En règle générale, un trait d'union ou un astérisque est utilisé pour la puce, précédé
+   par un seul espace, avec des lignes vides entre les deux, mais les conventions
+   varient ici
 
-If you use an issue tracker, put references to them at the bottom,
-like this:
+Si vous utilisez un outil de suivi de tickets, mettez-y des références en bas,
+comme ça:
 
-Resolves: #123
-See also: #456, #789
-```
+Résout: #123
+Voir aussi: #456, #789
+''

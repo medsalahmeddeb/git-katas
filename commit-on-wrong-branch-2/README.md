@@ -1,26 +1,23 @@
-# Git kata: Commit on wrong branch II
+# Git kata: Commit sur la mauvaise branche II
 
-## The Story
+## L'historique
 
-You develop a new feature on the branch `new-feature`. You have already
-implemented the first part of a feature, when you are notified of a critical
-bug that has to be fixed right away on the `master` branch.
+Vous développez une nouvelle fonctionnalité sur la branche «new-feature».implémenté la première partie d'une fonctionnalité, lorsque vous êtes averti d'un bug qui doit être corrigé tout de suite sur la branche `master`.
 
-After the bug fix, you continue to work on the new feature. After you committed
-the second part of the feature, you realize that you have done your commit on
-the `master` branch instead of the feature branch.
+Après la correction du bogue, vous continuez à travailler sur la new-feature.
+après avoir commité la deuxième partie de la fonctionnalité, vous vous rendez compte que vous avez fait votre commit sur la branche `master` au lieu de la branche de new-feature.
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-1. Move the faulty commit from the `master` branch to the `new-feature` branch.
-2. How would you also bring the bugfix to your feature branch?
+1. Déplacez le commit défectueux de la branche `master` vers la branche` new-feature`.
+2. Comment apporteriez-vous également la correction de bogue à votre branche new-feature?
 
-## Useful Commands
+## Commandes utiles
 
-* `git reset HEAD~1` to move the current branch one step back. This has the consequence of _removing_ the newest commit from a branch
-* `git stash` to temporarily save your changes so that you can switch branches
-* `git cherry-pick` to add changeset from commit on current branch
+* `git reset HEAD~1` pour déplacer la branche actuelle d'un pas en arrière. Cela a pour conséquence de _supprimer_ le dernier commit d'une branche
+* `git stash` pour enregistrer temporairement vos modifications afin de pouvoir changer de branche
+* `git cherry-pick` pour ajouter le changeset du commit sur la branche actuelle

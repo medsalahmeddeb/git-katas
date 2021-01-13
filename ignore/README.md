@@ -1,37 +1,37 @@
-# Git Kata: Basic Ignore
-We'll work a bit with the `.gitignore` file in this kata.
-In this file you can specify both file extensions and folder structures that you do not want Git to track.
-You can still `git add` files and folder that are ignored in the `.gitignore` file.
+# Git Kata: Ignore
+Nous allons travailler un peu avec le fichier `.gitignore` dans ce kata.
+Dans ce fichier, vous pouvez spécifier à la fois des extensions de fichier et des structures de dossiers que vous ne souhaitez pas que Git effectue le suivi.
+Vous pouvez toujours les fichiers et dossiers `git add` qui sont ignorés dans le fichier` .gitignore`.
 
-We will also work with `git rm`, which is the Git remove command. `git rm` does just the same as removing a file from your working directory, and then staging that change by issuing a `git add filename` on the file that was just deleted.
-Sometimes you add a file by accident that was not meant for Git e.g. binary files, class files etc.
+Nous travaillerons également avec `git rm`, qui est la commande Git remove. `git rm` fait exactement la même chose que de supprimer un fichier de votre répertoire de travail, puis de mettre ce changement dans le stage avec `git add filename` sur le fichier qui vient d'être supprimé.
+Parfois, vous ajoutez un fichier par accident qui n'était pas destiné à Git, par exemple fichiers binaires, fichiers de classe, etc.
 
-If you want to signal to Git that a file needs to be removed from git, but still want it in your working directory, then use `git rm --cached` to issue a remove command on the staging area, but not in your working directory.
+Si vous voulez signaler à Git qu'un fichier doit être supprimé de git, mais que vous le souhaitez toujours dans votre répertoire de travail, utilisez `git rm --cached` pour émettre une commande remove sur la zone de stage, mais pas dans votre repertoire de travail.
 
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`. \ Setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-1. Create a file with the name `foo.s`
-2. What is the output of `git status`?
-3. Create a `.gitignore` file in your working directory containing `*.s`
-4. What is the output of `git status`?
-5. Commit the `.gitignore` file
-6. Commit `file1.txt`
-7. Add `txt` files to `.gitignore` by adding a line in the file containing `*.txt`
-8. What does `git status` tell us?
-9. Change `file1.txt`
-10. What does `git status` tell us? Why was the file tracked even though the `txt` extension is in the ignore file?
-11. Make another text file in the repository, what does `git status` look like now? Why is it not tracked?
-12. Stage the removal of `file1.txt` with the command `git rm --cached`
-13. What does `git status` say?
-14. Add a new file `file2.txt` and add `!file2.txt` to `.gitignore`.
-15. What does `git status` say? Can you think of a use-case for keeping track of a file although the extension is ignored?
+1. Créez un fichier avec le nom «foo.s»
+2. Quelle est la sortie de `git status`?
+3. Créez un fichier `.gitignore` dans votre répertoire de travail contenant `*.s`
+4. Quelle est la sortie de `git status`?
+5. Validez le fichier `.gitignore`
+6. Validez `file1.txt`
+7. Ajoutez les fichiers `txt` à `.gitignore` en ajoutant une ligne contenant `*.txt`
+8. Que nous dit `git status`?
+9. Modifiez `file1.txt`
+10. Que nous dit `git status`? Pourquoi le fichier a-t-il été suivi même si l'extension `txt` est dans le fichier ignoré?
+11. Créez un autre fichier texte dans le référentiel, à quoi ressemble `git status` maintenant? Pourquoi n'est-il pas suivi?
+12. Effectuez la suppression de `file1.txt` avec la commande` git rm --cached`
+13. Que dit `git status`?
+14. Ajoutez un nouveau fichier `file2.txt` et ajoutez `!file2.txt` à `.gitignore`.
+15. Que dit `git status`? Pouvez-vous penser à un cas d'utilisation pour garder une trace d'un fichier bien que l'extension soit ignorée?
 
-## Useful commands
+## Commandes utiles
 - `git rm`
 - `git add`
 - `git commit`
@@ -39,7 +39,7 @@ If you want to signal to Git that a file needs to be removed from git, but still
 - `git rm --cached`
 
 
-## Aliases
-You can set up aliases as such:
+## Alias
+Vous pouvez configurer des alias en tant que tels:
 `git config --global alias.lol 'log --oneline --graph --all'`
-This might be useful to you.
+Cela pourrait vous être utile.

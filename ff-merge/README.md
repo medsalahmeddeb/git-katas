@@ -1,30 +1,30 @@
-# Git Kata: Fast-forward Merge
-## Setup:
+# Git Kata: fusion rapide
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-You again live in your own branch, this time we will be doing a bit of juggling with branches, to show how lightweight branches are in git.
+Vous êtes à nouveau dans votre propre branche, cette fois nous allons faire un peu de jonglage avec les branches, pour montrer à quel point les branches sont légères dans git.
 
-1. Create a (feature)branch called feature/uppercase
-2. Checkout the branch
-3. What is the output of `git status`?
-4. Edit the greeting.txt to contain an uppercase greeting
-5. Add greeting.txt files to staging area and commit
-6. What is the output of `git branch`?
-7. What is the output of `git log --oneline --graph --all`
+1. Créez une branche feature appelée FEATURE en majuscule
+2. Découvrez la branche
+3. Quelle est la sortie de `git status`?
+4. Modifiez le message de greeting.txt pour qu'il contienne un message d'accueil en majuscules
+5. Ajoutez les fichiers greeting.txt à la zone de staging et validez
+6. Quelle est la sortie de `git branch`?
+7. Quelle est la sortie de `git log --oneline --graph --all`
 
-*Remember: you want to pull in the commit on the feature branch into master. The command 'git merge [branch name]' takes one branch as argument from which it takes commits. The commits are applied to the branch pointed to by HEAD (currently checked out branch).*
+* N'oubliez pas: vous voulez insérer le commit sur la branche FEATURE dans master. La commande 'git merge [nom de la branche]' prend la branche, qui contient les commits, comme argument. Les commits sont appliqués à la branche pointée par HEAD (branche actuelle). *
 
-8. Checkout `master` branch
-9.  Use `cat` to see the contents of the greetings
-10. Diff the branches
-11. Merge the branches
-12. Use `cat` to see the contents of the greetings
-13. Delete the uppercase branch
+8. Allez dans la branche «master»
+9. Utilisez `cat` pour voir le contenu de greeting.txt
+10. Diff des branches
+11. Fusionner les branches
+12. Utilisez `cat` pour voir le contenu de greeting.txt
+13. Supprimez la branche en majuscule
 
-## Useful commands
+## Commandes utiles
 - `git branch`
 - `git branch <branch-name>`
 - `git branch -d <branch-name>`

@@ -1,41 +1,41 @@
-# Git Kata: Basic stashing
+# Git Kata: stockage basique
 
-## Setup:
+## Installer:
 
-1. Run `source setup.sh` (or `.\setup.ps1` in PowerShell)
+1. Exécutez `source setup.sh` (ou`.\setup.ps1` dans PowerShell)
 
-## The task
+## La tâche
 
-You are working on your project. You've staged some work and have some unstaged work as well.
-Suddenly, you're made aware that a bug has made it to production. You'll stash your work, fix the bug and get back to your original work.
+Vous travaillez sur votre projet. Vous avez mis en stage des travaux mais il-y-a des travaux non mis également.
+Soudainement, vous êtes informé qu'un bug est arrivé en production. Vous allez cacher votre travail, corriger le bogue et revenir à votre travail d'origine.
 
-1. Explore the repo
-   1. What work do you have in the working directory?
-   2. What work do you have staged ?
-   3. What does the commit log look like ?
-   >*Notice that file.txt has some staged changes (i.e. changes in the index) and unstaged changes (changes in the working directory)*
-2. Use `git stash` to stash your current work.
-   1. Now, what work do you have in the working directory?
-   2. What work do you have staged ?
-   3. What does the commit log look like ?
-   4. What does the stash list look like ?
-3. Fix the typos in bug.txt on master and commit your changes.
-4. Now to get back to your work, apply the stash to master.
-   1. What work do you have in the working directory?
-   2. What work do you have staged ?
-   >*Oops. All our changes are unstaged now. This may be undesirable and unexpected*
-5. Undo our changes with `git reset --hard HEAD`. This is an unsafe command as it will remove files from your index and working directory permanently, but we have our changes safely stashed so we're ok. Review the [reset](reset/README.md) kata if you're unsure of what happens here.
-6. Apply the stash to master with the `--index` option.
-   1. What work do you have in the working directory?
-   2. What work do you have staged ?
-   >*Ok, back to where we were!*
-7. We won't need the stash anymore. Drop it.
-   1. What does the stash list look like ?
-   2. What does the commit log look like ?
+1. Explorez le repo
+   1. Quel travail avez-vous dans le répertoire de travail?
+   2. Quel travail avez-vous mis en stage?
+   3. À quoi ressemble le journal de commits?
+   > * Notez que file.txt a des changements dans le stage (changements dans l'index) et des changements pas dans le stage (changements dans le répertoire de travail) *
+2. Utilisez `git stash` pour cacher votre travail actuel.
+   1. Maintenant, quel travail avez-vous dans le répertoire de travail?
+   2. Quel travail avez-vous mis en stage?
+   3. À quoi ressemble le journal des commits?
+   4. À quoi ressemble la liste de stash?
+3. Corrigez les fautes de frappe dans bug.txt sur master et validez vos modifications.
+4. Maintenant, pour revenir à votre travail, appliquez le stash à master.
+   1. Quel travail avez-vous dans le répertoire de travail?
+   2. Quel travail avez-vous mis en stage?
+   > * Oups. Tous nos changements ne sont pas mis en stage maintenant. Cela peut être indésirable et inattendu *
+5. Annulez vos modifications avec `git reset --hard HEAD`. Il s'agit d'une commande non sécurisée car elle supprimera définitivement les fichiers de votre index et de votre répertoire de travail, mais nos modifications sont stockées en toute sécurité, donc tout va bien. Consultez le kata [reset] (reset/README.md) si vous n'êtes pas sûr de ce qui se passe ici.
+6. Appliquez le stash à master avec l'option `--index`.
+   1. Quel travail avez-vous dans le répertoire de travail?
+   2. Quel travail avez-vous mis en stage?
+   > * Ok, revenons là où nous étions! *
+7. Nous n'aurons plus besoin du stash. Supprimez le.
+   1. À quoi ressemble la liste des réserves?
+   2. À quoi ressemble le journal de validation?
 
 
 
-## Useful commands
+## Commandes utiles
 
 - `git status`
 - `git status -s`
