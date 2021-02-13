@@ -8,14 +8,23 @@
 Vous êtes à nouveau dans votre propre branche, cette fois nous allons faire un peu de jonglage avec les branches, pour montrer à quel point les branches sont légères dans git.
 
 1. Créez une branche appelée greeting et vérifiez-la
+
 2. Modifiez le message de greeting.txt pour qu'il contienne votre message d'accueil préféré
+
 3. Ajoutez les fichiers greeting.txt à la zone de préparation (index)
+
 4. Commitez
+
 5. Revenez à la branche master
+
 6. Créez un fichier README.md avec des informations sur ce référentiel
+
 7. Ajoutez le fichier README.md à l'index et commitez
+
 8. Quelle est la sortie de `git log --oneline --graph --all`?
+
 9. Diff les branches
+
 10. Fusionner la branche greeting dans master
 
 ## Commandes utiles
