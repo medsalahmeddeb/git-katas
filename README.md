@@ -1,73 +1,40 @@
----
-maintainer: randomsort
----
+
 # Git Katas
 
 ## Quick Start
 
-### In the Cloud
+### Sur le Cloud
 
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/praqma-training/git-katas.git)
 
-### On Your Local Machine
+### Sur votre ordinateur local
 
 ![Quick Start](/images/quickstart.gif)
 
-- Clone this repository
-- Go into the folder you want to solve an exercise in
-- Run the `setup.sh` script
-- Consult the README.md in that folder to get a description of the exercise
+- Cloner ce référentiel
+- Allez dans le dossier dans lequel vous souhaitez résoudre un exercice
+- Exécutez le script `setup.sh`
+- Consultez le README.md dans ce dossier pour obtenir une description de l'exercice
 
-## Purpose of Git Katas
 
-This repository is a collection of Git exercises.
-The concept is stolen without shame from [Schauderhaft.de](http://blog.schauderhaft.de/gitkata/).
-Unfortunately, they have not maintained the system - and we need more good Git exercises.
+## Objectif de Git Katas
 
-The exercises are designed for use when we are teaching Git courses. You should be able to use them as self-contained exercises that will allow you to keep your Git skills sharp.
+Ce référentiel est une collection d'exercices Git.
+Le concept est volé sans honte à [Schauderhaft.de] (http://blog.schauderhaft.de/gitkata/).
+Malheureusement, ils n'ont pas maintenu le système - et nous avons besoin de plus de bons exercices Git.
 
-Exercises starting with _basic_ are entry-level - other exercises vary greatly in difficulty.
+Les exercices sont conçus pour être utilisés lorsque nous enseignons des cours Git. Vous devriez pouvoir les utiliser comme des exercices autonomes qui vous permettront de garder vos compétences Git affûtées.
 
-To get an overview of the exercises in here look in [Overview.md](Overview.md).
+Les exercices commençant par _basic_ sont d'entrée de gamme - les autres exercices varient considérablement en difficulté.
 
-Feel free to use these exercises, that's why they're public!
+Pour avoir un aperçu des exercices ici, regardez dans [Overview.md] (Overview.md).
 
-## Suggested Learning Path
+N'hésitez pas à utiliser ces exercices, c'est pourquoi ils sont publics!
 
-If you are coming to this repository for some basic Git knowledge, we recommend going through the exercises in the following order.
-This is the order that Jan Krag at Praqma teaches Git and might change over time. There are more exercises than this, but these should take you through
-everything you need to be able to use Git effectively in your day to day life. 
-
-- [Basic Commits](./basic-commits/README.md)
-- [Basic Staging](./basic-staging/README.md)
-- [Investigation](./investigation/README.md)
-- [Basic Branching](./basic-branching/README.md)
-- [Fast Forward Merge](./ff-merge/README.md)
-- [3 way Merge](./3-way-merge/README.md)
-- [Merge Mergesort](./merge-mergesort/README.md)
-- [Rebase Branch](./rebase-branch/README.md)
-- [Basic Revert](./basic-revert/README.md)
-- [Reset](./reset/README.md)
-- [Basic Cleaning](./basic-cleaning/README.md)
-- [Amend](./amend/README.md)
-- [Reorder the History](./reorder-the-history/README.md)
-- [Advanced Rebase Interactive](./advanced-rebase-interactive/README.md)
-- [Rebase using autosquash](./rebase-interactive-autosquash/README.md)
-- [Basic Stashing](./basic-stashing/README.md)
-
-See [Overview.md](Overview.md) for a more complete list and suggested order.
-
-## Contributing
-
-If you miss exercises or find errors in any of them, feel free to improve them and make a pull request.
-
-You can also make an issue so we notice an opportunity to improve!
-
-Thank you!
 
 ## Cheatsheet
 
-A collection of useful commands to use throughout the exercises:
+Une collection de commandes utiles à utiliser tout au long des exercices:
 
 ```shell
 # Initializing an empty git repository.
@@ -170,5 +137,5 @@ git lol     # Does a "git log --graph --oneline --all"
 
 ## Testing
 
-There is a very small test that you can run in powershell or bash.
-It is contained in the scripts `test.sh` and `test.ps1`.
+Il existe un très petit test que vous pouvez exécuter dans PowerShell ou Bash.
+Il est contenu dans les scripts `test.sh` et` test.ps1`.
