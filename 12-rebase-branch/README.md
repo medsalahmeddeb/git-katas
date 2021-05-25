@@ -9,11 +9,11 @@ Vous êtes à nouveau dans votre propre branche, cette fois nous allons faire un
 
 1. Quelles branches existent?
 2. Consultez le journal de la branche master
-3. Découvrez la branche uppercase
+3. Basculez à la branche uppercase
 4. Comparez le journal avec journal de la branche master?
 5. Rebase votre branche uppercase avec le master (`git rebase master`)
 6. Qu'est-ce qui vient de se passer? Dessine le!
-7. Maintenant, vérifiez la branche master
+7. Maintenant, basculez la branche master
 8. Fusionner les uppercases dans le master
 9. À quoi ressemble le journal maintenant?
 
