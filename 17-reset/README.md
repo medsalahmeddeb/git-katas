@@ -11,13 +11,13 @@ Nous utilisons la **reset** pour annuler le changement, mais nous pouvons égale
 
 1. À quoi ressemble votre répertoire de travail?
 2. À quoi ressemble votre journal? À quoi ressemble votre stage?
-3. Essayez d'exécuter `git reset --soft HEAD ~ 1`
+3. Essayez d'exécuter `git reset --soft HEAD~1`
 4. Qu'arrive-t-il à votre répertoire de travail, à votre journal et à votre stage?
-5. Exécutez `git reset --mixed HEAD ~ 1`
+5. Exécutez `git reset --mixed HEAD~1`
 6. Qu'arrive-t-il à votre répertoire de travail, à votre journal et à votre stage?
-7. Exécutez `git reset --hard HEAD ~ 1`
+7. Exécutez `git reset --hard HEAD~1`
 8. Qu'arrive-t-il à votre répertoire de travail, à votre journal et à votre stage?
-9. Essayez maintenant d'utiliser `git revert HEAD ~ 1`
+9. Essayez maintenant d'utiliser `git revert HEAD~1`
 10. Qu'arrive-t-il à votre répertoire de travail, à votre journal et à votre stage?
 
 ## Commandes utiles
