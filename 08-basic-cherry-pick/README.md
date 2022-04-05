@@ -28,7 +28,7 @@ Comme vous pouvez le voir, la branche `feature` et la branche `master` ont progr
 
 1. Utilisez `git log --decorate --oneline --graph --all` pour consulter l'historique
 2. Utilisez `cat` pour afficher le contenu de `names.txt`. Ce fichier est modifié dans le commit F
-3. Utilisez `cat` pour afficher le contenu de `phrase.txt`. Ce fichier est modifié dans le commit G
+3. Utilisez `cat` pour afficher le contenu de `sentence.txt`. Ce fichier est modifié dans le commit G
 4. Utilisez `git cherry-pick <commit_hash_F>` pour sélectionner uniquement le commit F sur votre branche
 5. Utilisez `git log --decorate --oneline` pour voir la modification de l'historique et ce commit F devrait maintenant être le dernier commit sur la branche master
 6. Utilisez `cat` pour voir le contenu de `names.txt` regardez comment il a maintenant changé!
