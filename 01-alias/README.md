@@ -22,7 +22,7 @@ Les alias sont stockés dans votre git config et peuvent donc être système, gl
 Y a-t-il une différence dans la sortie?
 
 5. Créez un autre alias, cette fois local, qui répertorie les commits dont vous êtes l'auteur \
-`git config --local alias.lome "log --author='$(git config --get user.name)'"`
+`git config  alias.lome "log --author=\"$(git config --get user.name)\""`
 
 6. Exécutez votre alias `git lome` \
  Que montre-t-il?
